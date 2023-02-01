@@ -1,5 +1,5 @@
 :root {
-    --very-dark-mostly-dark-blue: #121214;
+    --very-dark-blue: #121214;
     --bright-yellow: #F7DD43;
     --white: #FFFFFF;
     --very-dark-grayish-blue: #323238;
@@ -43,11 +43,18 @@ body {
     margin: auto;
 }
 
+#cards {
+    display: flex;
+    gap: 3.2rem;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
 .card {
     padding: 5.2rem 3.3rem;
     text-align: center;
     border-radius: .6rem;
-    border-bottom: .2rem solid var(--Bright-yellow);
+    border-bottom: .2rem solid var(--bright-yellow);
     background: var(--Very-dark-yellow)
 }
 
@@ -87,5 +94,5 @@ body {
 
 .card li + li {
     padding-top: 2.4rem;
-    border-top: solid .1rem var(--Very-dark-grayish-blue);
+    border-top: solid .1rem var(--very-dark-grayish-blue);
 }
