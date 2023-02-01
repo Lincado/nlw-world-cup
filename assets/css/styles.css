@@ -1,3 +1,12 @@
+:root {
+    --very-dark-mostly-dark-blue: #121214;
+    --bright-yellow: #F7DD43;
+    --white: #FFFFFF;
+    --very-dark-grayish-blue: #323238;
+    --dark-yellow-olive-tone: #746615;
+    --Very-dark-yellow: #1D1C19;
+}
+
 * {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -15,7 +24,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: #121214;
+    background-color: var(--very-dark-blue);
 }
 
 .header {
@@ -38,8 +47,8 @@ body {
     padding: 5.2rem 3.3rem;
     text-align: center;
     border-radius: .6rem;
-    border-bottom: .2rem solid #F7DD43;
-    background: #1D1C19;
+    border-bottom: .2rem solid var(--Bright-yellow);
+    background: var(--Very-dark-yellow)
 }
 
 .card h2 {
@@ -47,10 +56,10 @@ body {
     align-items: center;
     gap: 1.6rem;
     padding: .8rem 1.6rem;
-    border: .1rem solid #746615;
+    border: .1rem solid var(--dark-yellow-olive-tone);
     border-radius: .6rem;
     font-size: 2.4rem;
-    color: #F7DD43;
+    color: var(--bright-yellow);
     width: fit-content;
     margin-inline: auto;
     margin-bottom : 5.3rem;
@@ -59,23 +68,24 @@ body {
 .card span {
     text-transform: uppercase;
     font-size: 1.4rem;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .card ul {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    width: 27rem;
 }
 .card li {
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 3.6rem;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .card li + li {
     padding-top: 2.4rem;
-    border-top: solid .1rem #323238;
+    border-top: solid .1rem var(--Very-dark-grayish-blue);
 }
