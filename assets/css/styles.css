@@ -1,10 +1,12 @@
 :root {
+    --very-dark-mostly-blue: #202024;
     --very-dark-blue: #121214;
     --bright-yellow: #F7DD43;
+    --bright-blue: #338AF3;
     --white: #FFFFFF;
     --very-dark-grayish-blue: #323238;
     --dark-yellow-olive-tone: #746615;
-    --Very-dark-yellow: #1D1C19;
+    --very-dark-yellow: #1D1C19;
 }
 
 * {
@@ -20,27 +22,24 @@ ul {
 }
 
 body {
-    background: url("../img/bg-blue.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--very-dark-blue);
+    background: url("../img/bg-blue.svg") var(--very-dark-blue) no-repeat top center/cover;
 }
 
 .header {
     display: flex;
     flex-flow: column wrap;
     margin-bottom: 4.3rem;
-    padding: 2rem;
+    
 
 }
 .header img {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 #app {
     width: fit-content;
     margin: auto;
+    padding-top: 4rem;
 }
 
 #cards {
@@ -54,8 +53,9 @@ body {
     padding: 5.2rem 3.3rem;
     text-align: center;
     border-radius: .6rem;
-    border-bottom: .2rem solid var(--bright-yellow);
-    background: var(--Very-dark-yellow)
+    border-bottom: .2rem solid var(--bright-blue);
+    background: var(--very-dark-mostly-blue);
+    animation: appear 300ms;
 }
 
 .card h2 {
@@ -63,7 +63,7 @@ body {
     align-items: center;
     gap: 1.6rem;
     padding: .8rem 1.6rem;
-    border: .1rem solid var(--dark-yellow-olive-tone);
+    border: .1rem solid var(--bright-blue);
     border-radius: .6rem;
     font-size: 2.4rem;
     color: var(--bright-yellow);
@@ -95,4 +95,22 @@ body {
 .card li + li {
     padding-top: 2.4rem;
     border-top: solid .1rem var(--very-dark-grayish-blue);
+}
+
+.card h2:hover,
+.card li img:hover,
+.card li strong:hover {
+    transition: all 300ms ease-in-out;
+    transform: scale(1.1);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
 }
